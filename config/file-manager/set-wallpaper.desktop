@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Action
+Name=Set as Wallpaper
+Name[ru]=Установить как обои (feh)
+Icon=preferences-desktop-wallpaper
+Profiles=profile-zero;
+
+[X-Action-Profile profile-zero]
+MimeTypes=image/*;image/jpeg;image/jpg;image/png;image/bmp;image/webp;image/gif;image/x-png;
+Exec=feh --bg-fill %f
+Name=Default Profile

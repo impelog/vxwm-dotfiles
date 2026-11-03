@@ -1,0 +1,12 @@
+[ -f ~/.fehbg ] && ~/.fehbg &
+setxkbmap -layout us,ru -option grp:alt_shift_toggle &
+picom --animations -b &
+dunst &
+
+# Status bar loop
+while true; do
+    xsetroot -name "$(date '+%H:%M:%S  %d.%m.%Y')"
+    sleep 1
+done &
+
+exec vxwm

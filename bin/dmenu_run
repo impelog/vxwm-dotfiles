@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+import sys
+import os
+import shlex
+
+dmenu_args = ["dmenu", "-b", "-x", "460", "-y", "8", "-z", "1000", "-i"]
+for arg in sys.argv[1:]:
+    dmenu_args.append(shlex.quote(arg))
+
+dmenu_cmd = " ".join(dmenu_args)
+
+os.execvp("j4-dmenu-desktop", [
+    "j4-dmenu-desktop",
+    "--term=st",
+    f"--dmenu={dmenu_cmd}"
+])

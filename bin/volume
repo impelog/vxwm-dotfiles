@@ -1,0 +1,29 @@
+#!/bin/sh
+unset LD_LIBRARY_PATH
+
+case "$1" in
+    up)
+        pactl set-sink-mute @DEFAULT_SINK@ false
+        pactl set-sink-volume @DEFAULT_SINK@ +5%
+        ;;
+    down)
+        pactl set-sink-mute @DEFAULT_SINK@ false
+        pactl set-sink-volume @DEFAULT_SINK@ -5%
+        ;;
+    mute)
+        pactl set-sink-mute @DEFAULT_SINK@ toggle
+        ;;
+    *)
+        echo "Usage: $0 {up|down|mute}"
+        exit 1
+        ;;
+esac
+
+vol=$(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po "[0-9]+(?=%)" | head -n 1)
+mute=$(pactl get-sink-mute @DEFAULT_SINK@ | awk "{print \$2}")
+
+if [ "$mute" = "yes" ]; then
+    dunstify -a "Volume" -r 2593 -u low -t 1500 -h int:value:0 "Громкость" "Без звука [Muted]"
+else
+    dunstify -a "Volume" -r 2593 -u low -t 1500 -h int:value:"$vol" "Громкость: ${vol}%"
+fi

@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ "$1" = "-s" ]; then
+    maim -s | xclip -selection clipboard -t image/png
+else
+    maim | xclip -selection clipboard -t image/png
+fi

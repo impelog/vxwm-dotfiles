@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=vxwm
+Comment=Versatile X Window Manager
+Exec=/usr/local/bin/vxwm-session
+Type=Application
