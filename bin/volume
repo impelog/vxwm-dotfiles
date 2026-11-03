@@ -23,7 +23,7 @@ vol=$(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po "[0-9]+(?=%)" | head -n 1)
 mute=$(pactl get-sink-mute @DEFAULT_SINK@ | awk "{print \$2}")
 
 if [ "$mute" = "yes" ]; then
-    dunstify -a "Volume" -r 2593 -u low -t 1500 -h int:value:0 "Громкость" "Без звука [Muted]"
+    dunstify -a "Volume" -r 2593 -u low -t 1500 -h int:value:0 "Volume" "Muted"
 else
-    dunstify -a "Volume" -r 2593 -u low -t 1500 -h int:value:"$vol" "Громкость: ${vol}%"
+    dunstify -a "Volume" -r 2593 -u low -t 1500 -h int:value:"$vol" "Volume: ${vol}%"
 fi

@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e
 
+if [ ! -f /etc/arch-release ]; then
+    echo "Error: install.sh is for Arch Linux only." >&2
+    exit 1
+fi
+
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 RED='\033[0;31m'

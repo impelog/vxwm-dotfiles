@@ -1,49 +1,51 @@
 # Packages
 
-- **vxwm** — https://codeberg.org/wh1tepearl/vxwm
-- **st** — https://git.suckless.org/st
-- **dmenu** — https://git.suckless.org/dmenu
-- **picom-ftlabs** — https://github.com/FT-Labs/picom
-- **dunst** — https://github.com/dunst-project/dunst
-- **j4-dmenu-desktop** — https://github.com/enkore/j4-dmenu-desktop
-- **pcmanfm** — https://github.com/lxde/pcmanfm
-- **feh** — https://github.com/derf/feh
-- **maim** — https://github.com/naelstrof/maim
-- **xclip** — https://github.com/astrand/xclip
-- **lightdm** — https://github.com/canonical/lightdm
-- **lightdm-mini-greeter** — https://github.com/prikhi/lightdm-mini-greeter
-- **pipewire** — https://gitlab.freedesktop.org/pipewire/pipewire
-- **wireplumber** — https://gitlab.freedesktop.org/pipewire/wireplumber
-- **xsetroot** — https://gitlab.freedesktop.org/xorg/app/xsetroot
+- [vxwm](https://codeberg.org/wh1tepearl/vxwm)
+- [st](https://git.suckless.org/st)
+- [dmenu](https://git.suckless.org/dmenu)
+- [picom-ftlabs](https://github.com/FT-Labs/picom)
+- [dunst](https://github.com/dunst-project/dunst)
+- [j4-dmenu-desktop](https://github.com/enkore/j4-dmenu-desktop)
+- [pcmanfm](https://github.com/lxde/pcmanfm)
+- [feh](https://github.com/derf/feh)
+- [maim](https://github.com/naelstrof/maim)
+- [xclip](https://github.com/astrand/xclip)
+- [lightdm](https://github.com/canonical/lightdm)
+- [lightdm-mini-greeter](https://github.com/prikhi/lightdm-mini-greeter)
+- [pipewire](https://gitlab.freedesktop.org/pipewire/pipewire)
+- [wireplumber](https://gitlab.freedesktop.org/pipewire/wireplumber)
+- [xsetroot](https://gitlab.freedesktop.org/xorg/app/xsetroot)
+
+> `install.sh` is for Arch Linux only.
 
 # Hotkeys
 
-| Горячие клавиши | Действие |
+| Key | Action |
 |---|---|
-| `Super + Shift + Enter` | Терминал (`st`) |
-| `Super + p` | Запуск приложений (`dmenu` / `j4-dmenu-desktop`) |
-| `Super + e` | Файловый менеджер (`pcmanfm`) |
-| `Print` | Скриншот всего экрана в буфер обмена |
-| `Shift + Print` / `Super + Shift + s` | Скриншот выбранной области в буфер обмена |
-| `XF86AudioRaiseVolume` / `Super + F3` | Увеличить громкость (+5%) |
-| `XF86AudioLowerVolume` / `Super + F2` | Уменьшить громкость (-5%) |
-| `XF86AudioMute` / `Super + F1` | Включить / выключить звук (Mute) |
-| `Alt + Shift` | Переключение раскладки (US / RU) |
-| `Super + 1` .. `3` | Переключиться на воркспейс 1, 2, 3 |
-| `Alt + 1` .. `3` | Переместить активное окно на воркспейс 1, 2, 3 |
-| `Super + Ctrl + 1` .. `3` | Переключить отображение воркспейса |
-| `Super + Shift + c` | Закрыть текущее окно |
-| `Super + j` / `Super + k` | Переключить фокус на следующее / предыдущее окно |
-| `Super + Enter` | Сделать активное окно главным (Master) |
-| `Super + h` / `Super + l` | Изменить ширину главной области (mfact) |
-| `Super + i` / `Super + d` | Увеличить / уменьшить количество главных окон |
-| `Super + b` | Показать / скрыть статусбар |
-| `Super + Space` | Переключить режим раскладки (tile / float) |
-| `Super + Shift + Space` / `Super + q` | Переключить окно в плавающий режим |
-| `Super + Shift + f` | Полноэкранный режим (Fullscreen) |
-| `Super + Shift + q` | Выход из vxwm |
-| `Super + Стрелки` | Перемещение окна стрелками клавиатуры |
-| `Super + Ctrl + Стрелки` | Изменение размера окна стрелками клавиатуры |
-| `Super + ЛКМ (drag)` | Перемещение окна мышью |
-| `Super + ПКМ (drag)` | Изменение размера окна мышью |
-| `Super + СКМ` | Переключить плавающий режим окна |
+| `Super + Shift + Enter` | Terminal (`st`) |
+| `Super + p` | App launcher (`dmenu`) |
+| `Super + e` | File manager (`pcmanfm`) |
+| `Print` | Fullscreen screenshot to clipboard |
+| `Shift + Print` / `Super + Shift + s` | Area screenshot to clipboard |
+| `XF86AudioRaiseVolume` / `Super + F3` | Volume up (+5%) |
+| `XF86AudioLowerVolume` / `Super + F2` | Volume down (-5%) |
+| `XF86AudioMute` / `Super + F1` | Toggle mute |
+| `Alt + Shift` | Switch keyboard layout (US / RU) |
+| `Super + 1..3` | Switch workspace |
+| `Alt + 1..3` | Move window to workspace |
+| `Super + Ctrl + 1..3` | Toggle workspace view |
+| `Super + Shift + c` | Close window |
+| `Super + j` / `Super + k` | Focus next / prev window |
+| `Super + Enter` | Promote to master |
+| `Super + h` / `Super + l` | Resize master area |
+| `Super + i` / `Super + d` | Inc / dec master count |
+| `Super + b` | Toggle status bar |
+| `Super + Space` | Cycle layout |
+| `Super + Shift + Space` / `Super + q` | Toggle floating |
+| `Super + Shift + f` | Toggle fullscreen |
+| `Super + Shift + q` | Quit vxwm |
+| `Super + Arrows` | Move window |
+| `Super + Ctrl + Arrows` | Resize window |
+| `Super + Left Click Drag` | Move window |
+| `Super + Right Click Drag` | Resize window |
+| `Super + Middle Click` | Toggle floating |
