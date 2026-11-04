@@ -25,7 +25,7 @@
 | Key | Action |
 |---|---|
 | `Print` | Fullscreen screenshot to clipboard |
-| `Shift + Print` / `Super + Shift + s` | Area screenshot to clipboard |
+| `Shift + Print` | Area screenshot to clipboard |
 | `XF86AudioRaiseVolume` / `Super + F3` | Volume up (+5%) |
 | `XF86AudioLowerVolume` / `Super + F2` | Volume down (-5%) |
 | `XF86AudioMute` / `Super + F1` | Toggle mute |

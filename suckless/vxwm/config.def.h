@@ -141,7 +141,6 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("pcmanfm") },
 	{ 0,                            XK_Print,  spawn,          SHCMD("screenshot") },
 	{ ShiftMask,                    XK_Print,  spawn,          SHCMD("screenshot -s") },
-	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("screenshot -s") },
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn, SHCMD("volume up") },
 	{ 0,                            XF86XK_AudioLowerVolume, spawn, SHCMD("volume down") },
 	{ 0,                            XF86XK_AudioMute,        spawn, SHCMD("volume mute") },
