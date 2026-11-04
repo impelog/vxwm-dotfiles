@@ -113,6 +113,7 @@ mkdir -p "$USER_HOME/.config/gtk-3.0"
 mkdir -p "$USER_HOME/.config/gtk-4.0"
 mkdir -p "$USER_HOME/.config/fastfetch"
 mkdir -p "$USER_HOME/.config/xsettingsd"
+mkdir -p "$USER_HOME/.config/wallpapers"
 mkdir -p "$USER_HOME/.local/share/file-manager/actions"
 
 cp -f "$SCRIPT_DIR/config/picom/picom.conf" "$USER_HOME/.config/picom/picom.conf"
@@ -121,11 +122,19 @@ cp -f "$SCRIPT_DIR/config/gtk-3.0/"* "$USER_HOME/.config/gtk-3.0/"
 cp -f "$SCRIPT_DIR/config/gtk-4.0/"* "$USER_HOME/.config/gtk-4.0/"
 cp -f "$SCRIPT_DIR/config/fastfetch/"* "$USER_HOME/.config/fastfetch/"
 cp -f "$SCRIPT_DIR/config/xsettingsd/"* "$USER_HOME/.config/xsettingsd/"
+cp -f "$SCRIPT_DIR/wallpapers/"* "$USER_HOME/.config/wallpapers/"
 cp -f "$SCRIPT_DIR/config/xinitrc" "$USER_HOME/.xinitrc"
 cp -f "$SCRIPT_DIR/config/file-manager/set-wallpaper.desktop" "$USER_HOME/.local/share/file-manager/actions/set-wallpaper.desktop"
 
+# Set default wallpaper
+cat << EOF > "$USER_HOME/.fehbg"
+#!/bin/sh
+feh --no-fehbg --bg-fill "$USER_HOME/.config/wallpapers/shishkin.jpg"
+EOF
+chmod +x "$USER_HOME/.fehbg"
+
 # Fix ownership
-chown -R "$TARGET_USER:$TARGET_USER" "$USER_HOME/.config/picom" "$USER_HOME/.config/dunst" "$USER_HOME/.config/gtk-3.0" "$USER_HOME/.config/gtk-4.0" "$USER_HOME/.config/fastfetch" "$USER_HOME/.config/xsettingsd" "$USER_HOME/.local/share/file-manager" "$USER_HOME/.xinitrc"
+chown -R "$TARGET_USER:$TARGET_USER" "$USER_HOME/.config/picom" "$USER_HOME/.config/dunst" "$USER_HOME/.config/gtk-3.0" "$USER_HOME/.config/gtk-4.0" "$USER_HOME/.config/fastfetch" "$USER_HOME/.config/xsettingsd" "$USER_HOME/.config/wallpapers" "$USER_HOME/.local/share/file-manager" "$USER_HOME/.xinitrc" "$USER_HOME/.fehbg"
 
 # System configs
 sudo mkdir -p /etc/lightdm
