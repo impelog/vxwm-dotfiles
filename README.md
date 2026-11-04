@@ -1,4 +1,4 @@
-![Preview](screenshots/shishkin.jpg)
+![Preview](screenshots/screenshot.jpg)
 
 # Packages
 
