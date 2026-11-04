@@ -1,3 +1,5 @@
+![Preview](screenshots/shishkin.jpg)
+
 # Packages
 
 - [vxwm](https://codeberg.org/wh1tepearl/vxwm)
