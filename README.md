@@ -18,7 +18,24 @@
 - [wireplumber](https://gitlab.freedesktop.org/pipewire/wireplumber)
 - [xsetroot](https://gitlab.freedesktop.org/xorg/app/xsetroot)
 
-> `install.sh` is for Arch Linux only.
+# How to install
+
+```bash
+# Dependencies
+sudo pacman -S --needed feh maim xclip j4-dmenu-desktop dunst pcmanfm xsettingsd fastfetch
+yay -S --needed picom-ftlabs-git
+
+# Build suckless tools
+for d in suckless/*; do sudo make -C "$d" clean install; done
+
+# Configs & scripts
+sudo cp bin/* /usr/local/bin/
+cp -r config/* ~/.config/
+cp config/xinitrc ~/.xinitrc
+cp -r wallpapers ~/.config/
+feh --bg-fill ~/.config/wallpapers/shishkin.jpg
+sudo cp config/lightdm/vxwm.desktop /usr/share/xsessions/
+```
 
 # Hotkeys added by me
 
