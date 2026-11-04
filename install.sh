@@ -140,9 +140,12 @@ chown -R "$TARGET_USER:$TARGET_USER" "$USER_HOME/.config/picom" "$USER_HOME/.con
 sudo mkdir -p /etc/lightdm
 sudo mkdir -p /etc/X11/xorg.conf.d
 sudo mkdir -p /usr/share/xsessions
+sudo mkdir -p /usr/share/backgrounds
 
 sudo cp -f "$SCRIPT_DIR/config/lightdm/lightdm.conf" /etc/lightdm/lightdm.conf
 sudo cp -f "$SCRIPT_DIR/config/lightdm/lightdm-mini-greeter.conf" /etc/lightdm/lightdm-mini-greeter.conf
+sudo cp -f "$SCRIPT_DIR/wallpapers/shishkin.jpg" /usr/share/backgrounds/shishkin.jpg
+sudo chmod 644 /usr/share/backgrounds/shishkin.jpg
 sudo cp -f "$SCRIPT_DIR/config/lightdm/vxwm.desktop" /usr/share/xsessions/vxwm.desktop
 sudo cp -f "$SCRIPT_DIR/config/xorg/00-keyboard.conf" /etc/X11/xorg.conf.d/00-keyboard.conf
 
