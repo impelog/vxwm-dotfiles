@@ -107,15 +107,19 @@ echo -e "${GREEN}[6/7] Installing configuration files...${NC}"
 # User configs
 mkdir -p "$USER_HOME/.config/picom"
 mkdir -p "$USER_HOME/.config/dunst"
+mkdir -p "$USER_HOME/.config/gtk-3.0"
+mkdir -p "$USER_HOME/.config/gtk-4.0"
 mkdir -p "$USER_HOME/.local/share/file-manager/actions"
 
 cp -f "$SCRIPT_DIR/config/picom/picom.conf" "$USER_HOME/.config/picom/picom.conf"
 cp -f "$SCRIPT_DIR/config/dunst/dunstrc" "$USER_HOME/.config/dunst/dunstrc"
+cp -f "$SCRIPT_DIR/config/gtk-3.0/"* "$USER_HOME/.config/gtk-3.0/"
+cp -f "$SCRIPT_DIR/config/gtk-4.0/"* "$USER_HOME/.config/gtk-4.0/"
 cp -f "$SCRIPT_DIR/config/xinitrc" "$USER_HOME/.xinitrc"
 cp -f "$SCRIPT_DIR/config/file-manager/set-wallpaper.desktop" "$USER_HOME/.local/share/file-manager/actions/set-wallpaper.desktop"
 
 # Fix ownership
-chown -R "$TARGET_USER:$TARGET_USER" "$USER_HOME/.config/picom" "$USER_HOME/.config/dunst" "$USER_HOME/.local/share/file-manager" "$USER_HOME/.xinitrc"
+chown -R "$TARGET_USER:$TARGET_USER" "$USER_HOME/.config/picom" "$USER_HOME/.config/dunst" "$USER_HOME/.config/gtk-3.0" "$USER_HOME/.config/gtk-4.0" "$USER_HOME/.local/share/file-manager" "$USER_HOME/.xinitrc"
 
 # System configs
 sudo mkdir -p /etc/lightdm

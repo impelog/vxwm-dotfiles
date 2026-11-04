@@ -27,7 +27,7 @@
     progress_bar_min_width = 180
     progress_bar_max_width = 280
     progress_bar_corner_radius = 4
-    highlight = "#0088aa"
+    highlight = "#d49b42"
 
     ### Aesthetics ###
     transparency = 0
@@ -36,7 +36,7 @@
     horizontal_padding = 14
     text_icon_padding = 10
     frame_width = 2
-    frame_color = "#005577"
+    frame_color = "#d49b42"
     corner_radius = 8
     separator_color = frame
 
@@ -45,19 +45,19 @@
     show_age_threshold = 60
 
 [urgency_low]
-    background = "#222222"
-    foreground = "#bbbbbb"
-    frame_color = "#005577"
+    background = "#1c1917"
+    foreground = "#9d978b"
+    frame_color = "#352f2a"
     timeout = 3
 
 [urgency_normal]
-    background = "#222222"
-    foreground = "#eeeeee"
-    frame_color = "#005577"
+    background = "#1c1917"
+    foreground = "#e4dfd5"
+    frame_color = "#d49b42"
     timeout = 4
 
 [urgency_critical]
-    background = "#222222"
-    foreground = "#ff5555"
-    frame_color = "#cc3333"
+    background = "#1c1917"
+    foreground = "#f5f2eb"
+    frame_color = "#b86847"
     timeout = 0

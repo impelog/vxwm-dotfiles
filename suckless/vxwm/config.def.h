@@ -13,12 +13,12 @@ static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
 #define COORDINATES_STYLE "[x%d y%d]" /* The style of coordinates displayed in bar, do not remove %d. */
 
-static MAYBE_CONST char normbgcolor[]           = "#222222";
-static MAYBE_CONST char normbordercolor[]       = "#444444";
-static MAYBE_CONST char normfgcolor[]           = "#bbbbbb";
-static MAYBE_CONST char selfgcolor[]            = "#eeeeee";
-static MAYBE_CONST char selbordercolor[]        = "#005577";
-static MAYBE_CONST char selbgcolor[]            = "#005577";
+static MAYBE_CONST char normbgcolor[]           = "#1c1917";
+static MAYBE_CONST char normbordercolor[]       = "#352f2a";
+static MAYBE_CONST char normfgcolor[]           = "#9d978b";
+static MAYBE_CONST char selfgcolor[]            = "#1c1917";
+static MAYBE_CONST char selbordercolor[]        = "#d49b42";
+static MAYBE_CONST char selbgcolor[]            = "#d49b42";
 static MAYBE_CONST char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },

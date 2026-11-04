@@ -1,0 +1,118 @@
+@define-color theme_bg_color #1c1917;
+@define-color theme_fg_color #e4dfd5;
+@define-color theme_base_color #24201c;
+@define-color theme_text_color #e4dfd5;
+@define-color theme_selected_bg_color #d49b42;
+@define-color theme_selected_fg_color #1c1917;
+@define-color bg_color @theme_bg_color;
+@define-color fg_color @theme_fg_color;
+@define-color base_color @theme_base_color;
+@define-color text_color @theme_text_color;
+@define-color selected_bg_color @theme_selected_bg_color;
+@define-color selected_fg_color @theme_selected_fg_color;
+@define-color insensitive_bg_color #1c1917;
+@define-color insensitive_fg_color #5c544b;
+@define-color borders #352f2a;
+@define-color unfocused_borders #352f2a;
+@define-color warning_color #d49b42;
+@define-color error_color #b86847;
+@define-color success_color #5e7d56;
+
+window, .background {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+}
+
+headerbar, toolbar, .toolbar {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+    border-color: @borders;
+}
+
+.view, textview text, iconview, treeview {
+    background-color: @theme_base_color;
+    color: @theme_text_color;
+}
+
+.view:selected, iconview:selected, treeview:selected,
+.view:selected:focus, iconview:selected:focus, treeview:selected:focus {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+.sidebar, .places, placessidebar {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+}
+
+.sidebar .view, placessidebar .view {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+}
+
+button {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+    border: 1px solid @borders;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+    border-color: @theme_selected_bg_color;
+}
+
+button:checked, button:active {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+entry {
+    background-color: @theme_base_color;
+    color: @theme_text_color;
+    border: 1px solid @borders;
+    border-radius: 4px;
+}
+
+entry:focus {
+    border-color: @theme_selected_bg_color;
+}
+
+menu, .menu, popover, .popover {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+    border: 1px solid @borders;
+}
+
+menuitem:hover {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+notebook tab {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+    border: 1px solid transparent;
+}
+
+notebook tab:checked {
+    background-color: @theme_base_color;
+    border-bottom: 2px solid @theme_selected_bg_color;
+}
+
+scrollbar slider {
+    background-color: @borders;
+    border-radius: 4px;
+    min-width: 6px;
+    min-height: 6px;
+}
+
+scrollbar slider:hover {
+    background-color: @theme_selected_bg_color;
+}
+
+statusbar {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+}
