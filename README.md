@@ -1,6 +1,6 @@
 ![Preview](screenshots/screenshot.jpg)
 
-# Packages
+# packages
 
 - [vxwm](https://codeberg.org/wh1tepearl/vxwm)
 - [st](https://git.suckless.org/st)
@@ -18,17 +18,17 @@
 - [wireplumber](https://gitlab.freedesktop.org/pipewire/wireplumber)
 - [xsetroot](https://gitlab.freedesktop.org/xorg/app/xsetroot)
 
-# How to install
+# how to install
 
 ```bash
-# Dependencies
+# dependencies
 sudo pacman -S --needed feh maim xclip j4-dmenu-desktop dunst pcmanfm xsettingsd fastfetch
 yay -S --needed picom-ftlabs-git
 
-# Build suckless tools
+# suckless ^^
 for d in suckless/*; do sudo make -C "$d" clean install; done
 
-# Configs & scripts
+# configs & scripts
 sudo cp bin/* /usr/local/bin/
 cp -r config/* ~/.config/
 cp config/xinitrc ~/.xinitrc
@@ -37,7 +37,7 @@ feh --bg-fill ~/.config/wallpapers/shishkin.jpg
 sudo cp config/lightdm/vxwm.desktop /usr/share/xsessions/
 ```
 
-# Hotkeys added by me
+# hotkeys
 
 | Key | Action |
 |---|---|
