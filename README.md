@@ -41,9 +41,9 @@ sudo cp config/lightdm/vxwm.desktop /usr/share/xsessions/
 
 | Key | Action |
 |---|---|
-| `Print` | Fullscreen screenshot to clipboard |
-| `Shift + Print` | Area screenshot to clipboard |
-| `XF86AudioRaiseVolume` / `Super + F3` | Volume up (+5%) |
-| `XF86AudioLowerVolume` / `Super + F2` | Volume down (-5%) |
+| `Print` | fullscreen screenshot to clipboard |
+| `Shift + Print` | area screenshot to clipboard |
+| `XF86AudioRaiseVolume` / `Super + F3` | volume up (+5%) |
+| `XF86AudioLowerVolume` / `Super + F2` | volume down (-5%) |
 | `XF86AudioMute` / `Super + F1` | Toggle mute |
-| `Alt + Shift` | Switch keyboard layout (US / RU) |
+| `Alt + Shift` | switch keyboard layout (US / RU) |
